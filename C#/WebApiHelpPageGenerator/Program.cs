@@ -22,7 +22,18 @@ namespace WebApiHelpPageGenerator
 
                     string assemblyPath = options.AssemblyPath;
                     HttpConfiguration config = HttpConfigurationImporter.ImportConfiguration(assemblyPath);
-                    Collection<ApiDescription> descriptions = config.Services.GetApiExplorer().ApiDescriptions;
+
+                    //Get the ApiExplorer instance, and bind our own XML doc provider to it
+                    var explorer = (ApiExplorer)config.Services.GetApiExplorer();
+
+                    if (!string.IsNullOrEmpty(options.XmlDocPath))
+                    {
+                        var docProvider = new XmlDocumentationProvider(options.XmlDocPath);
+                        explorer.DocumentationProvider = docProvider;
+                    }
+
+                    //And extract our API documentation 
+                    Collection<ApiDescription> descriptions = explorer.ApiDescriptions;
                     IOutputGenerator outputGenerator = LoadOutputGenerator(options);
                   
                     outputGenerator.GenerateIndex(descriptions);
@@ -61,7 +72,7 @@ namespace WebApiHelpPageGenerator
             }
             if (outputGenerator == null)
             {
-                outputGenerator = new DefaultOutputGenerator();
+                outputGenerator = new DefaultOutputGenerator(options.OutputPath);
             }
             return outputGenerator;
         }
