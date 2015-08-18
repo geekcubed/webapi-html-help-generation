@@ -13,14 +13,18 @@ namespace WebApiHelpPageGenerator
         public string basePath { get; set; }
 
 
-      public DefaultOutputGenerator()
-      {
-        basePath = Path.Combine(Environment.CurrentDirectory, "HtmlHelp");
-      }
-      public DefaultOutputGenerator(string baseBath):base()
-      {
-        
-      }
+        public DefaultOutputGenerator()
+        {
+            basePath = Path.Combine(Environment.CurrentDirectory, "HtmlHelp");
+        }
+
+        public DefaultOutputGenerator(string outputPath) : base()
+        {
+            if (!string.IsNullOrEmpty(outputPath)) {
+                this.basePath = outputPath;
+            }
+        }
+
         public void GenerateIndex(Collection<ApiDescription> apis)
         {
             Index indexTemplate = new Index
@@ -49,8 +53,8 @@ namespace WebApiHelpPageGenerator
         private void WriteFile(string fileName, String pageContent)
         {
             Console.WriteLine("writing file: {0}", fileName);
-          if (!Directory.Exists(basePath))
-            Directory.CreateDirectory(basePath);
+            if (!Directory.Exists(basePath))
+                Directory.CreateDirectory(basePath);
             File.WriteAllText(Path.Combine(basePath, fileName), pageContent);
         }
     }
