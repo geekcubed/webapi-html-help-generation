@@ -112,12 +112,12 @@ namespace WebApiHelpPage
 
         public string GetDocumentation(HttpControllerDescriptor controllerDescriptor)
         {
-          throw new NotImplementedException();
+            return "ActionDescription for " + controllerDescriptor.ControllerName;
         }
 
         public string GetResponseDocumentation(HttpActionDescriptor actionDescriptor)
         {
-          throw new NotImplementedException();
+            return "ActionDescription for " + actionDescriptor.ActionName;
         }
     }
 }
