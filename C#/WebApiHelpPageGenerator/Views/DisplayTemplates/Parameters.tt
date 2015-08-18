@@ -1,7 +1,7 @@
 <#
     Collection<ApiParameterDescription> parameters = Model.ApiDescription.ParameterDescriptions;
 #>
-<table class="help-page-table">
+<table class="table table-striped table-hover">
     <thead>
     <tr><th>Name</th><th>Description</th><th>Additional information</th></tr>
     </thead>
@@ -17,7 +17,7 @@
         { #>
             <tr>
                 <td><b><#=parameter.Name#></b></td>
-                <td><pre><#=parameterDocumentation#></pre></td>
+                <td><#=parameterDocumentation#></td>
                 <td>
                     <# switch (parameter.Source)
                     {
@@ -29,7 +29,7 @@
                             <# break;
                         case ApiParameterSource.Unknown:
                         default: #>
-                            <p>None.</p>
+                            &nbsp;
                             <# break;
                     } #>
                 </td>

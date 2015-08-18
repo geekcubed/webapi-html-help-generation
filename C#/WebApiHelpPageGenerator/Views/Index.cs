@@ -42,66 +42,53 @@ namespace WebApiHelpPage
             
             #line default
             #line hidden
-            this.Write("\r\n<html>\r\n<head>\r\n    <title>");
+            this.Write("\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n\t<meta charset=\"utf-8\">\r\n    <meta h" +
+                    "ttp-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" conten" +
+                    "t=\"width=device-width, initial-scale=1\">\r\n    <title>");
             
-            #line 17 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\Index.tt"
+            #line 21 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(title));
             
             #line default
             #line hidden
-            this.Write("</title>\r\n\t<style type=\"text/css\">\r\n\t\t");
-            this.Write("pre.wrapped {\r\n    white-space: -moz-pre-wrap;\r\n    white-space: -pre-wrap;\r\n    " +
-                    "white-space: -o-pre-wrap;\r\n    white-space: pre-wrap;\r\n}\r\n\r\n.warning-message-con" +
-                    "tainer {\r\n    margin-top: 20px;\r\n    padding: 0 10px;\r\n    color: #525252;\r\n    " +
-                    "background: #EFDCA9;\r\n    border: 1px solid #CCCCCC;\r\n}\r\n\r\n.help-page-table {\r\n " +
-                    "   width: 100%;\r\n    border-collapse: collapse;\r\n    text-align: left;\r\n    marg" +
-                    "in: 0px 0px 20px 0px;\r\n    border-top: 2px solid #D4D4D4;\r\n}\r\n\r\n    .help-page-t" +
-                    "able th {\r\n        text-align: left;\r\n        font-weight: bold;\r\n        border" +
-                    "-bottom: 2px solid #D4D4D4;\r\n        padding: 8px 6px 8px 6px;\r\n    }\r\n\r\n    .he" +
-                    "lp-page-table td {\r\n        border-bottom: 2px solid #D4D4D4;\r\n        padding: " +
-                    "15px 8px 15px 8px;\r\n        vertical-align: top;\r\n    }\r\n\r\n    .help-page-table " +
-                    "pre, .help-page-table p {\r\n        margin: 0px;\r\n        padding: 0px;\r\n        " +
-                    "font-family: inherit;\r\n        font-size: 100%;\r\n    }\r\n\r\n    .help-page-table t" +
-                    "body tr:hover td {\r\n        background-color: #F3F3F3;\r\n    }\r\n\r\na:hover {\r\n    " +
-                    "background-color: transparent;\r\n}\r\n\r\n.sample-header {\r\n    border: 2px solid #D4" +
-                    "D4D4;\r\n    background: #76B8DB;\r\n    color: #FFFFFF;\r\n    padding: 8px 15px;\r\n  " +
-                    "  border-bottom: none;\r\n    display: inline-block;\r\n    margin: 10px 0px 0px 0px" +
-                    ";\r\n}\r\n\r\n.sample-content {\r\n    display: block;\r\n    border-width: 0;\r\n    paddin" +
-                    "g: 15px 20px;\r\n    background: #FFFFFF;\r\n    border: 2px solid #D4D4D4;\r\n    mar" +
-                    "gin: 0px 0px 10px 0px;\r\n}\r\n\r\n.api-name {\r\n    width: 40%;\r\n}\r\n\r\n.api-documentati" +
-                    "on {\r\n    width: 60%;\r\n}\r\n\r\n.parameter-name {\r\n    width: 20%;\r\n}\r\n\r\n.parameter-" +
-                    "documentation {\r\n    width: 50%;\r\n}\r\n\r\n.parameter-source {\r\n    width: 30%;\r\n}");
-            this.Write("\r\n\t</style>\r\n</head>\r\n<body>\r\n<header>\r\n    <div class=\"content-wrapper\">\r\n      " +
-                    "  <div class=\"float-left\">\r\n            <h1>");
+            this.Write(@"</title>
+	<link rel=""stylesheet"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"">
+	<link rel=""stylesheet"" href=""https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"">
+</head>
+<body>
+	<nav class=""navbar navbar-inverse navbar-fixed-top"">
+		<div class=""container"">
+			<div class=""navbar-header"">
+			  <button type=""button"" class=""navbar-toggle collapsed"" data-toggle=""collapse"" data-target=""#navbar"" aria-expanded=""false"" aria-controls=""navbar"">
+				<span class=""sr-only"">Toggle navigation</span>
+				<span class=""icon-bar""></span>
+				<span class=""icon-bar""></span>
+				<span class=""icon-bar""></span>
+			  </button>
+			  <a class=""navbar-brand"" href=""index.html"">API Documentation</a>
+			</div>
+		</div>
+	</nav>
+	<div class=""container"">
+		<div class=""jumbotron"">
+			<h1>");
             
-            #line 26 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\Index.tt"
+            #line 41 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\Index.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(title));
             
             #line default
             #line hidden
-            this.Write(@"</h1>
-        </div>
-    </div>
-</header>
-<div id=""body"">
-    <section class=""featured"">
-        <div class=""content-wrapper"">
-            <h2>Introduction</h2>
-            <p>
-                Provide a general description of your APIs here.
-            </p>
-        </div>
-    </section>
-    <section class=""content-wrapper main-content clear-fix"">
-        ");
+            this.Write("</h1>\r\n\t\t\t<p>\r\n                Provide a general description of your APIs here.\r\n" +
+                    "            </p>\r\n\t\t</div>\r\n\t\t<div class=\"row\">\r\n\t\t\t");
             
-            #line 40 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\Index.tt"
+            #line 47 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\Index.tt"
  foreach (IGrouping<string, ApiDescription> controllerGroup in apiGroups)
-		{ 
+			{ 
             
             #line default
             #line hidden
-            this.Write("            ");
+            this.Write("\t\t\t\t<div class=\"col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2\">\t\t\t" +
+                    "\t\r\n\t\t\t\t\t");
             this.Write("<h2 id=\"");
             
             #line 1 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\DisplayTemplates\ApiGroup.tt"
@@ -116,8 +103,8 @@ namespace WebApiHelpPage
             
             #line default
             #line hidden
-            this.Write("</h2>\r\n<table class=\"help-page-table\">\r\n\t<thead>\r\n\t\t<tr><th>API</th><th>Descripti" +
-                    "on</th></tr>\r\n\t</thead>\r\n\t<tbody class=\"ui-widget-content\">\r\n\t");
+            this.Write("</h2>\r\n<table class=\"table table-striped table-hover\">\r\n\t<thead>\r\n\t\t<tr><th>Metho" +
+                    "d</th><th>Description</th></tr>\r\n\t</thead>\r\n\t<tbody>\r\n\t");
             
             #line 7 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\DisplayTemplates\ApiGroup.tt"
  foreach (var api in controllerGroup)
@@ -185,14 +172,15 @@ namespace WebApiHelpPage
             #line default
             #line hidden
             this.Write("\t</tbody>\r\n</table>");
-            this.Write("\r\n        ");
+            this.Write("\r\n\t\t\t\t</div>\r\n\t\t\t");
             
-            #line 43 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\Index.tt"
+            #line 52 "D:\Tools\webapi-html-help-generation\C#\WebApiHelpPageGenerator\Views\Index.tt"
  } 
             
             #line default
             #line hidden
-            this.Write("    </section>\r\n</div>\r\n</body>\r\n</html>");
+            this.Write("\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3." +
+                    "3.5/js/bootstrap.min.js\"></script>\r\n</body>\r\n</html>");
             return this.GenerationEnvironment.ToString();
         }
     }

@@ -1,9 +1,9 @@
 <h2 id="<#=controllerGroup.Key#>"><#=controllerGroup.Key#></h2>
-<table class="help-page-table">
+<table class="table table-striped table-hover">
 	<thead>
-		<tr><th>API</th><th>Description</th></tr>
+		<tr><th>Method</th><th>Description</th></tr>
 	</thead>
-	<tbody class="ui-widget-content">
+	<tbody>
 	<# foreach (var api in controllerGroup)
 	{ #>
 		<tr>

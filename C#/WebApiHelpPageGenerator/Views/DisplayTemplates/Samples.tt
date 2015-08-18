@@ -20,7 +20,7 @@
             {
 				if (sample is TextSample)
 				{ #>
-					<pre class="wrapped"><#=HttpUtility.HtmlEncode(((TextSample)sample).Text)#></pre>
+					<code class="wrapped"><#=HttpUtility.HtmlEncode(((TextSample)sample).Text)#></code>
 				<# }
 				else if (sample is ImageSample)
 				{ #>
